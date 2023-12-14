@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="手机，手机配件" />
+<meta name="Description" content="欧酷网手机/数码品类为你提供诸多手机/数码商品！提供诸多”飞利浦,奥克斯,HTC,阿尔卡特,海信,Apple/苹果,联想,LG,华为,魅族,诺基亚“等国内外品牌手机。" />
+<title>手机/数码-欧酷手机商城提供诸多国内外品牌手机！-欧酷网</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.gif" type="image/gif" />
+<link href="/themes/new_ouku/style.css?version=V3980.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+</script>
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<script type="text/javascript">
+  function shutDownTopMessage(){
+	  var newOukuTM=document.getElementById("newOukuTopMessage");
+	  newOukuTM.style.display = "none";
+  }
+</script>
+<!--[if lte IE 6]>
+  <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>    
+  <script type="text/javascript">        
+    DD_belatedPNG.fix('div, ul, img, li, input , a,.mc_items .item .icon,.mc_items .hover');    
+  </script>
+<![endif]-->
+
+
+<div id="newOukuTop">
+  <div class="newOukuCenter">
+    <div id="newOukuLogo"><a href="http://www.ouku.com/"><img src="http://www.ouku.com/themes/new_ouku/images/pic_newOukuLogo_01.jpg" /></a></div>
+    <div id="newOukuLogin">
+      <ul>
+        <li>  
+          
+          <div id="oukuShareTop" class="ouku_tools">
+            <a id="share_sinat" href="javascript:void(0);" onclick="Share('sina', '手机/数码-欧酷手机商城提供诸多国内外品牌手机！-欧酷网', 'http://www.ouku.com/themes/new_ouku/images/pic_newOukuLogo_01.jpg', '3058126217')" title="分享到我的新浪微博"></a>
+            <a id="share_qqt" href="javascript:void(0);" onclick="Share('qq', '手机/数码-欧酷手机商城提供诸多国内外品牌手机！-欧酷网', 'http://www.ouku.com/themes/new_ouku/images/pic_newOukuLogo_01.jpg', '7eed1272c21740159a04c38b7d0e65c3')" title="分享到我的腾讯微博"></a>
+            <a id="share_kaixin" href="javascript:void(0);" onclick="Share('kaixin', '手机/数码-欧酷手机商城提供诸多国内外品牌手机！-欧酷网', 'http://www.ouku.com/themes/new_ouku/images/pic_newOukuLogo_01.jpg')" title="分享到开心网"></a>
+			<a id="share_renren" href="javascript:void(0);" onclick="Share('renren', '手机/数码-欧酷手机商城提供诸多国内外品牌手机！-欧酷网', 'http://www.ouku.com/themes/new_ouku/images/pic_newOukuLogo_01.jpg')" title="分享到人人网"></a>
+          </div>
+		
+        </li>
+        <li style="margin-left:15px;">分享</li>
+        <li><a href="http://www.ouku.com/user.php" id="newOukuIconAccount">我的账户</a></li>
+        <li><a onclick="javascript:bookmark();" href="javascript:void(0);" id="newOukuIconFav">加入收藏</a></li>
+        <!--  div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"-->
+
+    <li><a href="http://www.ouku.com/user.php?act=register">注册</a></li>
+    <li><a href="http://www.ouku.com/user.php">登录</a></li>
+
+
+
+
+      </ul>
+    </div>
+    
+    <div id="newOukuTopSearch">
+      <form id="searchForm" name="searchForm" method="get" action="http://www.ouku.com/so.html" onSubmit="return checkSearchForm()"  >
+      <div id="newOukuTopSearchPanel">
+        <div id="newOukuTopSearchContent">
+          <input id="keyword" name="search_keywords" class="searchText" style="outline:0" autocomplete="off" type="text" value="" />
+          <input type="submit" class="searchBT" value="" />
+        </div>
+      </div>
+      </form>
+      <div id="newOukuHotWords">
+        热搜词：      <a href="http://www.ouku.com/so.html?search_keywords=MX3" target="_blank">MX3</a> |
+          <a href="http://www.ouku.com/so.html?search_keywords=iphone%2B5S" target="_blank">iphone 5S</a> |
+          <a href="http://www.ouku.com/so.html?search_keywords=T329t" target="_blank">T329t</a> |
+          <a href="http://www.ouku.com/so.html?search_keywords=Note%2B3" target="_blank">Note 3</a> |
+           </div>
+    </div>
+    <div id="newOukuPhoneNumber"></div>
+  </div>
+</div>
+<div id="newOukuNav">
+   <div class="newOukuCenter">
+      <div id="newOukuNavCon">
+        <ul id="newOukuNavNav">
+          <li><a href="http://www.ouku.com/" class="newOukuNavMain ">欧酷商城</a></li>
+                			          <li onMouseOver="display_sub_nav('1',1);" onMouseOut="display_sub_nav('1',0);" >
+	          	 <a id="top_cat_1" href="http://www.ouku.com/shouji"  class="newOukuNavMain selected">手机/数码</a>
+	               
+	             <ul id="sub_cat_1">
+	                	                <li><a href="http://www.ouku.com/phone">手机</a></li>
+	                	                <li><a href="http://www.ouku.com/shuma">数码/家电</a></li>
+	                	              </ul>
+	              	              <div class="clear"></div>
+	          </li>
+          	      	        			          <li onMouseOver="display_sub_nav('2',1);" onMouseOut="display_sub_nav('2',0);" >
+	          	 <a id="top_cat_2" href="http://www.ouku.com/peijian"  class="newOukuNavMain "><p>手机配件</p></a>
+	               
+	             <ul id="sub_cat_2">
+	                	                <li><a href="http://www.ouku.com/mpp">移动电源</a></li>
+	                	                <li><a href="http://www.ouku.com/dianchi">电池</a></li>
+	                	                <li><a href="http://www.ouku.com/chongdianqi">充电器</a></li>
+	                	                <li><a href="http://www.ouku.com/sdcard">储存卡/SD卡</a></li>
+	                	                <li><a href="http://www.ouku.com/tiemo">手机贴膜</a></li>
+	                	                <li><a href="http://www.ouku.com/erji">有线耳机</a></li>
+	                	                <li><a href="http://www.ouku.com/baohuke">保护壳</a></li>
+	                	                <li><a href="http://www.ouku.com/shujuxian">数据线</a></li>
+	                	                <li><a href="http://www.ouku.com/chezai">车载配件</a></li>
+	                	              </ul>
+	              	              <div class="clear"></div>
+	          </li>
+          	      	        			          <li onMouseOver="display_sub_nav('3',1);" onMouseOut="display_sub_nav('3',0);" >
+	          	 <a id="top_cat_3" href="http://www.ouku.com/computer"  class="newOukuNavMain "><p>电脑/平板</p></a>
+	               
+	             <ul id="sub_cat_3">
+	                	                <li><a href="http://www.ouku.com/pinban">平板电脑</a></li>
+	                	                <li><a href="http://www.ouku.com/bijiben">笔记本/一体机</a></li>
+	                	                <li><a href="http://www.ouku.com/dianpei">电脑配件</a></li>
+	                	              </ul>
+	              	              <div class="clear"></div>
+	          </li>
+          	      	        			          <li onMouseOver="display_sub_nav('4',1);" onMouseOut="display_sub_nav('4',0);" >
+	          	 <a id="top_cat_4" href="http://www.ouku.com/AppleAccessories"  class="newOukuNavMain "><p>苹果配件</p></a>
+	               
+	             <ul id="sub_cat_4">
+	                	                <li><a href="http://www.ouku.com/iphone5">iPhone5</a></li>
+	                	                <li><a href="http://www.ouku.com/ipadmini">iPad mini</a></li>
+	                	                <li><a href="http://www.ouku.com/iphone4">iPhone4/4S</a></li>
+	                	                <li><a href="http://www.ouku.com/ipad">iPad</a></li>
+	                	              </ul>
+	              	              <div class="clear"></div>
+	          </li>
+          	      	          </ul>
+        <div class="clear"></div>
+      </div>
+      <div id="newOukuBuyingCar">   
+        <span id="newOukuSelectedNumber">0</span>
+        <a href="http://www.ouku.com/flow.php">
+        <span id="newOukuCarTitle">我的购物车</span>
+        </a>
+      </div>
+   </div>
+</div>
+<div id="newOukuSemiNav">
+  <div class="newOukuCenter">
+    <ul>
+     
+            <li><a href="http://www.ouku.com/topic_list.html" target="_blank"><p>酷&middot;专题</p></a></li>
+            <li><a href="http://www.ouku.com/cool_new.html" target="_blank"><p>酷&middot;新品</p></a></li>
+            <li><a href="http://www.ouku.com/so.html?intro=new" target="_blank"><p>新品推荐</p></a></li>
+            <li><a href="http://www.ouku.com/so.html?intro=hot" target="_blank"><p>经典畅销</p></a></li>
+            <li><a href="http://www.ouku.com/so.html?intro=best" target="_blank"><p>精品推荐</p></a></li>
+            <li><a href="http://www.ouku.com/message.php" target="_blank"><p>Reviews</p></a></li>
+         	    </ul>
+  </div>
+</div>
+<div id="container">
+  <div id="body">
+    <div class="mallTopScreen">
+      <div class="newOukuFlAll">
+         
+       <div class="newOukuFl">
+        <div class="mtsCategory semiDefault">
+                        <div class="mallCategory">        
+	            <p class="mc_head"><span>手机</span></p>
+	           	<div class="mcContent">
+		            <ul class="mc_items">
+			            <li>			            <a href="http://www.ouku.com/list-407-16-0-0-0.html" title="飞利浦">飞利浦</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-21-0-0-0.html" title="HTC">HTC</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-23-0-0-0.html" title="海信">海信</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-24-0-0-0.html" title="Apple/苹果">Apple/苹果</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-25-0-0-0.html" title="联想">联想</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-27-0-0-0.html" title="华为">华为</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-28-0-0-0.html" title="魅族">魅族</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-29-0-0-0.html" title="诺基亚">诺基亚</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-31-0-0-0.html" title="三星">三星</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-34-0-0-0.html" title="小米">小米</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-35-0-0-0.html" title="中兴">中兴</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-36-0-0-0.html" title="摩托罗拉">摩托罗拉</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-39-0-0-0.html" title="夏普">夏普</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-41-0-0-0.html" title="索尼">索尼</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-42-0-0-0.html" title="酷派">酷派</a>
+			             | 			            			            <a href="http://www.ouku.com/list-407-45-0-0-0.html" title="海尔">海尔</a>
+			            			            			            </li>          
+		            </ul>
+	            </div>      
+            </div>
+                        <div class="mallCategory">        
+	            <p class="mc_head"><span>数码/家电</span></p>
+	           	<div class="mcContent">
+		            <ul class="mc_items">
+			            <li>			            <a href="http://www.ouku.com/list-318-24-0-0-0.html" title="Apple/苹果">Apple/苹果</a>
+			             | 			            			            <a href="http://www.ouku.com/list-318-74-0-0-0.html" title="步步高">步步高</a>
+			            			            			            </li>          
+		            </ul>
+	            </div>      
+            </div>
+                    </div>
+      </div>
+        
+      
+        
+                <div class="ouKuAdvBannerLeft"><p><a href="http://www.ouku.com/product/32854.html"><img width="210" height="210" alt="" src="http://img61.ouku.com/images/upload/Image/210_210.jpg" /></a></p></div>
+                
+        
+                
+        
+        
+                <div class="ouKuAdvBannerLeft lazyLoadClass"><p><a href="http://www.ouku.com/product/33548.html"><img width="210" height="224" src="http://img61.ouku.com/images/upload/Image/210_224(1).jpg" alt="" /></a></p></div>
+        
+        
+                <div class="newOukuFl">
+          <div id="hot_list" class="lazyLoadClass">
+                <div class="bfs_head">
+                <span class="title">畅销榜</span>
+                </div>
+                <div id="hot_list_inner">
+                    <div class="p_list">
+                      <ul>
+   						<li>
+ 							 							<div class="p">
+	                            <span>1</span>
+	                            <a href="http://www.ouku.com/product/34551.html" title="红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰" target="_blank"><img src="/images/201408/m/34551_m_1407776599207.jpg" alt="红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰" /></a>
+	                            <div class="p_info">
+	                                <a href="http://www.ouku.com/product/34551.html" title="红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰" class="p_name" target="_blank">红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰</a>
+	                                <font>欧酷价：</font><font class="fontPriceRed">￥729</font><br />
+	                                	市场价：￥1399	                            </div>
+                           	</div>
+                             							<div class="p">
+	                            <span>2</span>
+	                            <a href="http://www.ouku.com/product/29898.html" title="联想A789 手机（WCDMA/GSM）红色" target="_blank"><img src="/images/201306/m/29898_m_1370213721092.jpg" alt="联想A789 手机（WCDMA/GSM）红色" /></a>
+	                            <div class="p_info">
+	                                <a href="http://www.ouku.com/product/29898.html" title="联想A789 手机（WCDMA/GSM）红色" class="p_name" target="_blank">联想A789 手机（WCDMA/GSM）红色</a>
+	                                <font>欧酷价：</font><font class="fontPriceRed">￥666</font><br />
+	                                	市场价：￥1640	                            </div>
+                           	</div>
+                             							<div class="p">
+	                            <span>3</span>
+	                            <a href="http://www.ouku.com/product/25528.html" title="索尼 L36h 手机（WCDMA/GSM）紫色" target="_blank"><img src="/images/201304/m/25528_m_1365553501672.jpg" alt="索尼 L36h 手机（WCDMA/GSM）紫色" /></a>
+	                            <div class="p_info">
+	                                <a href="http://www.ouku.com/product/25528.html" title="索尼 L36h 手机（WCDMA/GSM）紫色" class="p_name" target="_blank">索尼 L36h 手机（WCDMA/GSM）紫色</a>
+	                                <font>欧酷价：</font><font class="fontPriceRed">￥2799</font><br />
+	                                	市场价：￥4999	                            </div>
+                           	</div>
+                             							<div class="p">
+	                            <span>4</span>
+	                            <a href="http://www.ouku.com/product/25523.html" title="索尼 L36h 手机（WCDMA/GSM）白色" target="_blank"><img src="/images/201304/m/25523_m_1365552932638.jpg" alt="索尼 L36h 手机（WCDMA/GSM）白色" /></a>
+	                            <div class="p_info">
+	                                <a href="http://www.ouku.com/product/25523.html" title="索尼 L36h 手机（WCDMA/GSM）白色" class="p_name" target="_blank">索尼 L36h 手机（WCDMA/GSM）白色</a>
+	                                <font>欧酷价：</font><font class="fontPriceRed">￥2799</font><br />
+	                                	市场价：￥4999	                            </div>
+                           	</div>
+                             							<div class="p">
+	                            <span>5</span>
+	                            <a href="http://www.ouku.com/product/25496.html" title="中兴V988 手机（WCDMA/GSM）白色" target="_blank"><img src="/images/201304/m/25496_m_1365546055825.jpg" alt="中兴V988 手机（WCDMA/GSM）白色" /></a>
+	                            <div class="p_info">
+	                                <a href="http://www.ouku.com/product/25496.html" title="中兴V988 手机（WCDMA/GSM）白色" class="p_name" target="_blank">中兴V988 手机（WCDMA/GSM）白色</a>
+	                                <font>欧酷价：</font><font class="fontPriceRed">￥3399</font><br />
+	                                	市场价：￥3599	                            </div>
+                           	</div>
+                                                           
+                      	</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        
+        
+                
+      </div>
+      
+      
+      <div class="fr frSemiDefault">
+        <div class="mtsBanner" id="mtsBanner">
+            <script type="text/javascript">
+  var swf_width=556;
+  var swf_height=311;
+</script>
+<div id="newOukuMarqueePhone">
+                <div id="marqueeBox">
+                    <ul id="marqueeContentID">
+											<li>
+							<a href="http://www.ouku.com/product/32157.html"><img border="0" src="http://img61.ouku.com/data/afficheimg/20140212fjjptf.jpg" width="556" height="311" alt="MEGA"/></a>
+						</li>
+											<li>
+							<a href="http://www.ouku.com/product/33225.html"><img border="0" src="http://img61.ouku.com/data/afficheimg/20140306sctmhy.jpg" width="556" height="311" alt="5S"/></a>
+						</li>
+											<li>
+							<a href="http://www.ouku.com/topic-152.html"><img border="0" src="http://img61.ouku.com/data/afficheimg/20131107jkprlv.jpg" width="556" height="311" alt="三星手机"/></a>
+						</li>
+										</ul>
+                </div>
+                <ul id="ouKuNumID">
+											<li class="">1</li>
+											<li class="">2</li>
+											<li class="">3</li>
+									</ul>
+            </div>       
+                </div>
+    	
+    	
+        
+                <div class="semiDefaultRightModule lazyLoadClass">
+            <div class="bfs_head"><span>新品上架</span>
+            </div>
+            <div class="rightModuleContent">
+                            <ul>
+                <li><a href="http://www.ouku.com/product/34551.html" title="红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰" target="_blank" class="semiDefaultListImg"><img src="/images/201408/l/34551_l_1407776599058.jpg" height="218" /></a>
+											<i class="labelAllXinPin"></i>
+									</li>
+                
+                <li class="title"><a href="http://www.ouku.com/product/34551.html" title="红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰" target="_blank">红米 1s 移动3G手机（TD-SCDMA/GSM）金属灰</a></li>
+                
+                <li>欧酷价：<font class="title fontPriceRed">￥729</font></li>
+                <li>市场价：<font class="title">￥1399</font></li>
+                <li class="introduction"></li>
+              </ul>
+                            <ul>
+                <li><a href="http://www.ouku.com/product/34428.html" title="索尼 Xperia Z2（L50t）4G手机（TD-LTE/TD-SCDMA/GSM）黑色" target="_blank" class="semiDefaultListImg"><img src="/images/201405/l/34428_l_1400196246557.jpg" height="218" /></a>
+											<i class="labelAllXinPin"></i>
+									</li>
+                
+                <li class="title"><a href="http://www.ouku.com/product/34428.html" title="索尼 Xperia Z2（L50t）4G手机（TD-LTE/TD-SCDMA/GSM）黑色" target="_blank">索尼 Xperia Z2（L50t）4G手机（TD-LTE/TD-SCDMA/GSM）黑色</a></li>
+                
+                <li>欧酷价：<font class="title fontPriceRed">￥4399</font></li>
+                <li>市场价：<font class="title">￥4999</font></li>
+                <li class="introduction"></li>
+              </ul>
+                            <ul>
+                <li><a href="http://www.ouku.com/product/34108.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 银色" target="_blank" class="semiDefaultListImg"><img src="/images/201401/l/34108_l_1390340108478.jpg" height="218" /></a>
+											<i class="labelAllXinPin"></i>
+									</li>
+                
+                <li class="title"><a href="http://www.ouku.com/product/34108.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 银色" target="_blank">苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 银色</a></li>
+                
+                <li>欧酷价：<font class="title fontPriceRed">￥4999</font></li>
+                <li>市场价：<font class="title">￥5888</font></li>
+                <li class="introduction"></li>
+              </ul>
+                          </div>
+        </div>
+                
+        
+                <div class="semiDefaultRightAdv lazyLoadClass"><p><a href="http://www.ouku.com/product/32792.html"><img width="756" height="204" src="http://img61.ouku.com/images/upload/Image/756_204.jpg" alt="" /></a></p></div>
+                
+        
+        <div class="semiDefaultRightModule lazyLoadClass">
+            <div class="bfs_head"><span>本日特推</span>
+            </div>
+            <div class="rightModuleContent">
+                            <ul>
+                <li><a href="http://www.ouku.com/product/34151.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）32GB 深空灰色" target="_blank" class="semiDefaultListImg"><img src="/images/201401/l/34151_l_1390679362458.jpg" height="218" /></a>
+											<i class="labelAllShouQing"></i>
+									</li>
+                
+                <li class="title"><a href="http://www.ouku.com/product/34151.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）32GB 深空灰色" target="_blank">苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）32GB 深空灰色</a></li>
+                
+                <li>欧酷价：<font class="title fontPriceRed">￥6088</font></li>
+                <li>市场价：<font class="title">￥6088</font></li>
+                <li class="introduction"></li>
+              </ul>
+                            <ul>
+                <li><a href="http://www.ouku.com/product/34109.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 深空灰色" target="_blank" class="semiDefaultListImg"><img src="/images/201401/l/34109_l_1390344993303.jpg" height="218" /></a>
+											<i class="labelAllTuiJian"></i>
+									</li>
+                
+                <li class="title"><a href="http://www.ouku.com/product/34109.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 深空灰色" target="_blank">苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 深空灰色</a></li>
+                
+                <li>欧酷价：<font class="title fontPriceRed">￥4899</font></li>
+                <li>市场价：<font class="title">￥5288</font></li>
+                <li class="introduction"></li>
+              </ul>
+                            <ul>
+                <li><a href="http://www.ouku.com/product/34093.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 金色" target="_blank" class="semiDefaultListImg"><img src="/images/201401/l/34093_l_1390258900754.jpg" height="218" /></a>
+											<i class="labelAllTuiJian"></i>
+									</li>
+                
+                <li class="title"><a href="http://www.ouku.com/product/34093.html" title="苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 金色" target="_blank">苹果 iPhone5s 移动4G手机（TD-LTE/TD-SCDMA/GSM）16GB 金色</a></li>
+                
+                <li>欧酷价：<font class="title fontPriceRed">￥4889</font></li>
+                <li>市场价：<font class="title">￥5288</font></li>
+                <li class="introduction"></li>
+              </ul>
+                          </div>
+        </div>
+        
+        
+                <div class="semiDefaultRightAdv lazyLoadClass"><p><a href="http://www.ouku.com/product/27996.html"><img width="756" height="204" alt="" src="http://img61.ouku.com/images/upload/Image/2A.jpg" /></a></p></div>
+              </div>
+      
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+    
+ 
+    <div class="clear"></div>    
+    <div id="footer_container">
+    <div id="footer">
+<div class="footer_top">
+            <div class="footer_top_bg">
+            <div id="footer_links">
+			<ul class="links1">
+                    <li class="links">新手帮助 </li>
+                    <li>
+                        <a href="http://www.ouku.com/article-100.html" target="_blank">购物流程</a>
+                    </li>
+                                          <li>
+                        <a href="http://www.ouku.com/article-77.html" target="_blank">订单状态</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-75.html" target="_blank">常见问题</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-76.html" target="_blank">发票说明</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ouku.com/article-74.html" target="_blank">防骗提示</a>
+                    </li>
+                                    </ul>
+                                    
+                <ul class="links2">
+                    <li class="links">关于支付</li>
+                    
+                                          <li>
+                        <a href="http://www.ouku.com/article-79.html" target="_blank">支付宝</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-80.html" target="_blank">快钱</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-81.html" target="_blank">财付通</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ouku.com/article-85.html" target="_blank">银行汇款</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-86.html" target="_blank">货到付款</a>
+                    </li>
+                                    </ul>
+                           
+                <ul class="links3">
+                    <li class="links">关于配送 </li>
+                    
+                                          <li>
+                        <a href="http://www.ouku.com/article-88.html" target="_blank">运费说明</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-89.html" target="_blank">顺丰快递</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-90.html" target="_blank">EMS快递</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ouku.com/article-91.html" target="_blank">快递跟踪</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-92.html" target="_blank">送达时间</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-93.html" target="_blank">签收流程</a>
+                    </li>
+                                    </ul>
+                           
+               
+                           
+                <ul class="links4">
+                    <li class="links">售后服务</li>
+                    
+                                          <li>
+                        <a href="http://www.ouku.com/article-94.html" target="_blank">退换货政策</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-95.html" target="_blank">运动品售后</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-96.html" target="_blank">退换货退款</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ouku.com/article-97.html" target="_blank">送检说明</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-98.html" target="_blank">保修政策</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ouku.com/article-99.html" target="_blank">厂家保修说明</a>
+                    </li>
+                                    </ul>
+                           
+                <ul class="links5">
+                    <li class="links">关于我们 </li>
+                    
+                                         <li>
+                        <a href="http://www.ouku.com/article-107.html" target="_blank">公司简介</a>
+                    </li>
+                                          <li>
+                        <a href="http://www.ouku.com/article-101.html" target="_blank">联系我们</a>
+                    </li>
+                                        <li>
+                        <a href="http://www.ouku.com/article-102.html" target="_blank">诚聘英才</a>
+                    </li>
+                                    </ul>
+                <ul class="links6">
+                    <li class="links">关注欧酷 </li>
+                    <li><a target="_blank" class="t_weibo" href="http://t.sina.com.cn/ouku/">欧酷微博</a></li>
+                    <li id="ouKuWeiXin">扫一扫，一起微信</li>
+                 </ul>
+                           
+                  
+            </div>
+            </div>
+        </div>
+        <div class="footer_top">
+            <div class="footer_top_bg">
+                <div id="footer_credit">
+                    
+                  <table border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td colspan="3" align="center" height="88" valign="middle">
+	<!-- <map name="FPMap0">
+      <area href="http://" shape="rect" coords="5, 5, 186, 50">
+      <area href="http://" shape="rect" coords="189, 6, 373, 49">
+      <area href="http://" shape="rect" coords="381, 6, 567, 49">
+      <area href="http://" shape="rect" coords="569, 6, 749, 51">
+	</map> -->
+      <img border="0" src="http://www.ouku.com/themes/new_ouku/images/footer_sprite.jpg?v=V3980" usemap="#FPMap0"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <table border="0" width="100%" cellspacing="0" cellpadding="5">
+        <tr>
+          <td colspan="3"><b>支付保障</b></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.alipay.com/" target="_blank" ><img src="http://www.ouku.com/themes/new_ouku/images/cert/zhi_bao.gif" /></a></td>
+          <td><a href="https://www.tenpay.com/" target="_blank" ><img src="http://www.ouku.com/themes/new_ouku/images/cert/cft.gif" /></a></td>
+          <td><a href="https://www.99bill.com/" target="_blank" ><img src="http://www.ouku.com/themes/new_ouku/images/cert/kq.gif" /></a></td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top" width="50"></td>
+    <td valign="top">
+      <table border="0" width="100%" cellspacing="0" cellpadding="5">
+        <tr>
+          <td colspan="5"><b>法律保障</b></td>
+        </tr>
+        <tr>
+          <td><a href="http://www.miibeian.gov.cn" target="_blank" ><img src="http://www.ouku.com/themes/new_ouku/images/cert/icp.gif" /></a></td>
+                <td><!--script src="https://ss.cnnic.cn/seallogo.dll?sn=2008100900100000114" ></script-->
+                  <a href="https://ss.knet.cn/verifyseal.dll?sn=2008100900100000114&amp;ct=df&amp;a=1&amp;pa=915939" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"> 
+       <img src="https://ss.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"> 
+    </a>
+                </td>
+                <td><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20090623144453673" target="_blank"> <img src="http://www.ouku.com/themes/new_ouku/images/cert/shgs.gif" /></a></td>
+                <!--td><a href="http://sh.cyberpolice.cn" target="_blank"> <img src="http://www.ouku.com/themes/ouku/images/cert/shwj.jpg" /></a></td-->
+                <td><a href="http://www.zx110.org/" target="_blank"> <img class="zxw_width" src="http://www.ouku.com/themes/new_ouku/images/cert/zxw_new.jpg" /></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+                </div>
+            </div>
+        </div>
+        <div class="blank"></div>
+<div id="foot_b">
+	 <div class="text">
+	 &copy; 2005-2015 欧酷商城 版权所有，并保留所有权利。<br />
+	 上海市国定东路 	 	      Tel: 4006667900	 	 	 	      	      	      	      	      	      	      	      	      	      	      	      	      	  <br />
+	  	  ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备10211500号</a>
+	       
+	 </div>
+</div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js?version=V3980.js"></script><script type="text/javascript" src="/js/jquery.NbspAutoComplete.1.0.js?version=V3980.js"></script><script>
+try{
+$(function(){
+	$("#keyword").NbspAutoComplete({
+		location       : "/suggest.php",
+		datatype       : "json",
+		selectcount    : "all",
+		liheight       : "24px"
+	});
+});
+}catch(e){}
+</script>
+<div style="display:none">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36883073-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5001d0ecef5d5dd5b481a85914c64204' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/15186267.js"></script></div>
+<script type="text/javascript" src="themes/new_ouku/js/common_footer.js?version=V3980"></script>
+<div id="newOuKuFd" title="返回顶部" style="display:none;"></div>
+<div id="saySomeThing"><a href="http://www.ouku.com/message.php" title="您的建议"></a></div>
+<script type="text/javascript">
+goTopEx();
+</script>
+<script type="text/javascript" src="themes/new_ouku/js/MSClass.js?version=V3980"></script>
+<script type="text/javascript" charset="utf-8"> 
+new Marquee(
+{
+	MSClassID : "marqueeBox",
+	ContentID : "marqueeContentID",
+	TabID	  : "ouKuNumID",
+	Direction : 0,
+	Step	  : 0.3,
+	Width	  : 556,
+	Height	  : 311,
+	Timer	  : 20,
+	DelayTime : 3000,
+	WaitTime  : 0,
+	ScrollStep: 311,
+	SwitchType: 0,
+	AutoStart : 1
+})
+</script>
+<script type="text/javascript" src="themes/new_ouku/js/jquery.lazyload.js?version=V3980"></script>
+</body>
+</html>

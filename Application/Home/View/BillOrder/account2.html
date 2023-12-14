@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="TPSHOP BETA v1.0.0">
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<title>{$category_name}_Shopping Process_{:C('SETTING.TITLE')}</title>
+
+
+<link href="__RES__/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__RES__/js/jquery.min.js" ></script>
+<script language="javascript">
+$(function(){
+		
+	    <empty name="list_address">		<!-- 显示添加框 -->
+			$("#address_add").show();
+			$("#address_list").hide();
+        <else/>		<!-- 显示 list框 -->
+			$("#address_add").hide();
+			$("#address_list").show();
+        </empty>
+	
+	
+        $("#add").click(function(){
+		var a =$("form").serialize();
+	    $.post("__CONTROLLER__/add_address",$('form').serialize(),function(data){
+		if(data!=""){
+			data = eval('('+data+')');
+			var info="<tr><td bgcolor='#ffffff'> <input type='radio' name='address_id'  checked='checked' value='"+data.id+"'/></td><td bgcolor='#ffffff' >Consignee Name:</td> <td bgcolor='#ffffff' value='545' ><font size='-3'  ><span id='row1_name'>"+data.name+"</span></font> </td><td bgcolor='#ffffff'>mobile phone:</td><td bgcolor='#ffffff'><font size='-3'>"+data.phone+"</font> </td> <td bgcolor='#ffffff'>phone:</td><td bgcolor='#ffffff'><font size='-3'>"+data.tel+"</font> </td> <td bgcolor='#ffffff'>Postal Code:</td>	<td bgcolor='#ffffff'><font size='-3'>"+data.zipcode+"</font></td> <td bgcolor='#ffffff'>city:</td>	<td bgcolor='#ffffff'><font size='-3'>"+data.city+"</font> </td><td bgcolor='#ffffff'>address:</td>	<td bgcolor='#ffffff'><font size='-3'>"+data.address+"</font></td></tr>";
+			$("#address_add").hide(400);
+			$("#address_list").append($(info)).show();
+			
+		}else{
+			alert("Add address failed！");
+		} 
+	  }); 
+   });
+ });
+</script>
+<!---->
+</head>
+<body>
+<script type="text/javascript">
+var process_request = "Processing your request...";
+</script>
+<include file="Include/header" />
+<div class="blank"></div>
+
+
+<div class="block box">
+ <div id="ur_here">
+  current location: <a href="#">Home</a> <code>&gt;</code> Shopping Process </div>
+</div>
+
+<div class="blank"></div>
+<div class="block">
+ 
+       <form action="__CONTROLLER__/account3" method="post" name="theForm" id="theForm" >
+        
+			<input type="hidden"  name="money" id="money" value="{$cart_sum}" />
+			<input type="hidden"  name="code" id="code" value="{$Think.get.code}" />
+        <div class="flowBox">
+        <h6><span>Product list</span></h6>
+        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+            <tbody><tr>
+              <th bgcolor="#ffffff">Product Name</th>
+              <th bgcolor="#ffffff">Attribute</th>
+              <th bgcolor="#ffffff">Price</th>
+              <th bgcolor="#ffffff">Purchase quantity</th>
+              <th bgcolor="#ffffff">Subtotal</th>
+            </tr>
+			<foreach name="list_cart" item="row_cart">
+            <tr>
+            <td bgcolor="#ffffff" id="title" name="title">
+                      {$row_cart.title}  
+                                                  </td>
+            <td bgcolor="#ffffff"> {$row_cart.attribute}  
+</td>
+		
+			<td bgcolor="#ffffff" align="right">{$row_cart.price} </td>
+            <td  bgcolor="#ffffff" id="cart_id"  align="right">
+			{$row_cart.count} </td>
+
+			
+            <td bgcolor="#ffffff" align="right"><php>
+              echo $row_cart['count']*$row_cart['price'];
+              </php></td>
+            </tr>
+			</foreach>
+                                    <tr>
+              <td bgcolor="#ffffff" colspan="7">
+                            Shopping money subtotal <span id="total">{$cart_sum}</span>$ </td>
+            </tr>
+                      </tbody></table>
+      </div>
+      <div class="blank"></div>	  
+	
+	 <div class="flowBox">
+
+      <h6><span>consignee</span></h6>
+	
+
+    <div style="  width:960px;" id="yicang" >
+	
+        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="address_add">
+                <tr>
+                  <td align="right" bgcolor="#ffffff">Consignee Name：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="name" type="text"  class="inputBg" id="mem_name" >
+                  (REQUIRED) </td>
+				  
+         <td align="right" bgcolor="#ffffff">Address：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="address" type="text" class="inputBg" id="address" ></td>
+                </tr>
+                <tr>
+                  <td align="right" bgcolor="#ffffff">Mobile Phone：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="phone" type="text" class="inputBg" id="phone" >
+                  (REQUIRED)</td>
+                  <td align="right" bgcolor="#ffffff">Home Tel：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="tel" type="text" class="inputBg" id="tel" ></td>
+                </tr>
+                <tr>
+                  <td align="right" bgcolor="#ffffff">Postal Code：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="zipcode" type="text" class="inputBg" id="zipcode" >
+                  (REQUIRED)</td>
+                  <td align="right" bgcolor="#ffffff">City：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="city" type="text" class="inputBg" id="city" ></td>
+                </tr>
+        
+                <tr>
+                 
+                  <td colspan="4" align="center" bgcolor="#ffffff">
+                  	<input type="button" class="bnt_blue_1" id="add" value="Confirm"/>
+                       
+                  </td>
+                </tr> 
+		   </table>
+		   
+			
+
+     <table width="99%" align="center" border="0" cellpadding="5"  id="address_list" cellspacing="1" bgcolor="#dddddd" >
+ 
+		 		<foreach name="list_address" item="row_address">
+		   <tr>
+		   
+		  <td bgcolor="#ffffff"> <input type="radio"  name="address_id"  checked="checked" value="{$row_address.id}"></td>
+			   <td bgcolor="#ffffff" >Consignee Name:</td> <td bgcolor="#ffffff" value="545" >{$row_address.name} </td> 
+			   <td bgcolor="#ffffff">Mobile Phone:</td><td bgcolor="#ffffff">{$row_address.phone}</td>
+			 <td bgcolor="#ffffff">Home Tel:</td><td bgcolor="#ffffff">{$row_address.tel} </td>
+				<td bgcolor="#ffffff">Postal Code:</td>	<td bgcolor="#ffffff">{$row_address.zipcode}</td> 
+				<td bgcolor="#ffffff">City:</td>	<td bgcolor="#ffffff">{$row_address.city} </td>
+				<td bgcolor="#ffffff">Delivery Address:</td>	<td bgcolor="#ffffff">{$row_address.address}</td>
+				</tr>
+			</foreach>
+	  </table>
+	  </div>
+    </div>
+     <div class="blank"></div>
+     <div class="blank"></div>
+                <div class="flowBox">
+    <h6><span>Payment Method</span></h6>
+    <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" id="paymentTable">
+            <tbody><tr>
+              <th width="5%" bgcolor="#ffffff">&nbsp;</th>
+              <th width="20%" bgcolor="#ffffff">Name</th>
+              <th bgcolor="#ffffff">Order Description</th>
+              <th bgcolor="#ffffff" width="15%">Commission</th>
+            </tr>
+                        
+             
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="pay_way" value="1" checked=""iscod="0" onclick="selectPayment(this)"></td>
+              <td valign="top" bgcolor="#ffffff"><strong>Bank Transfer</strong></td>
+              <td valign="top" bgcolor="#ffffff">Bank Name
+Payee Information: Full Name ××× ； Account or address ××× ； Opening bank ×××。
+Attention: When processing wire transfers, please indicate your Order No. in the "remittance purpose" column of the wire transfer form.
+</td>
+              <td align="right" bgcolor="#ffffff" valign="top">0.00$</td>
+            </tr>
+                        
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="pay_way" value="2" iscod="1" onclick="selectPayment(this)"></td>
+              <td valign="top" bgcolor="#ffffff"><strong>cash on delivery</strong></td>
+              <td valign="top" bgcolor="#ffffff">Activate city：×××
+Cash on Delivery area：×××</td>
+              <td align="right" bgcolor="#ffffff" valign="top"><span id="ECS_CODFEE">0.00$</span></td>
+            </tr>
+                      </tbody></table>
+    </div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    <div class="flowBox">
+    <h6><span>Total expenses</span></h6>
+          <div id="ECS_ORDERTOTAL">
+<table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+    <tbody>
+    <tr>
+    <td align="right" bgcolor="#ffffff">
+      Product price: <font class="f4_b"><span id="total">{$cart_sum}</span>$</font>
+                        + distribution costs: <font class="f5_b">0.00$</font>
+                                  </td>
+  </tr>
+    <tr>
+    <td align="right" bgcolor="#ffffff"> Accounts Payable Money: <font class="f4_b"><span id="total">{$cart_sum}</span>$</font>
+    	</td>
+  </tr>
+</tbody></table>
+</div>           <div align="center" style="margin:8px auto;">
+           
+            <input type="submit" name="s" value="submit"  class="bnt_blue_1">
+            <input type="hidden" name="step" value="done">
+            </div>
+    </div>
+ </form>
+        
+                
+
+
+
+</div>
+<div class="blank5"></div>
+<include file="Include/footer" />
+
+
+</body></html>

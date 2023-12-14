@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/css.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.1.min.js"></script>    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+	<script>
+		$(function(){
+			$("#view_way").change(function(){
+				location.href='__CONTROLLER__/'+$(this).val()+"/member_id/"+$("#member_id").val();
+			});
+		});
+	</script>
+</head>
+<body style="width:95%">
+<form class="form-inline definewidth " action="__CONTROLLER__/index" method="post">
+	<input type="hidden" name="member_id" id="member_id" value="{$Think.get.member_id}"/>
+    The current member ：<php> echo M("member")->where("id=".$_GET['member_id'])->getField("name");</php>
+   &nbsp;&nbsp;  
+   <select name="view_way" id="view_way">
+    <option value="mem_bill" >View order</option>
+    <option value="mem_balance">View  details</option>
+    <option value="mem_address">viewDelivery address</option>
+    <option value="mem_refund" selected>View order return</option>       
+	</select>
+            &nbsp;&nbsp; 
+    <a  class="btn btn-success"  href="__CONTROLLER__/index">Return list</a>
+</form>
+<table id="table" class="table table-bordered table-hover definewidth m10" >
+
+    <tr>
+        <th>Order No.</th>
+   		<th>money</th>
+        <th>reason</th>
+	
+        <th>Processing results</th>
+		<th>Application time</th>
+        <th>Processing time</th>
+		<th>状态</th>
+    </tr>
+ 
+	<foreach name="list" item="row">
+	<tr>
+    <td>{$row.bill_code}</td>
+    <td>{$row.money}$</td>
+    <td>{$row.reason}</td>
+    <td>{$row.result}</td>
+    <td >{$row.datetime}</td>
+	<td >{$row.datetime_handle}</td>
+
+    <td>
+      
+		    
+    <if condition="($row.status eq 0)">
+    待确认
+
+    <elseif condition="$row.status eq 1" />
+    同意退款
+    <elseif condition="$row.status eq -1" />
+    拒绝退款
+     
+   
+    </if></td>
+
+  </tr>
+  </foreach>
+</table>
+<div style="float:right;" id="page" class="yahoo2">{$pagestr}</div>
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+  <tbody></tbody></table>
+
+  </div>
+
+</form>
+ <div style="margin-left:400px; width:1200px;" class="digg">{$page}</div>
+
+
+<br/>
+<br/><br/>
+
+
+
+</body>
+  
+  </html>
+
+<script>
+    $(function () {
+        
+
+
+
+    });
+
+
+</script>

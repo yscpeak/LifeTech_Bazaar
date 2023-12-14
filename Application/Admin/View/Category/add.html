@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.2.min.js"></script>
+    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+
+    <script>
+		$(function(){
+			$("#name").keyup(function(){
+				var name=$("#name").val();
+				$.get("__CONTROLLER__/checkedName",{name:name},function(data){
+					if(data=="success"){
+						$("#checked").html("Category already exists");
+						$("#sub").attr("disabled",true);
+					}else if(data=="error"){
+						$("#checked").html("");
+						$("#sub").attr("disabled",false);
+					}
+				});
+
+			});
+			$("#code").keyup(function(){
+			 var code=$("#code").val();
+				 $.get("__CONTROLLER__/checkedCode",{code:code},function(data){
+					 if(data=="success"){
+							$("#check").html("Category already exists");
+							$("#sub").attr("disabled",true);
+						}else if(data=="error"){
+							$("#check").html("");
+							$("#sub").attr("disabled",false);
+						}
+				 });
+			});
+			
+			$("#checkbox").toggle(function(){
+				$(".checkboxinline input").attr("checked",true);
+				$("#quanxuan").html("deselect all");
+			},function(){
+				$(".checkboxinline input").attr("checked",false);
+				$("#quanxuan").html("Select All");
+			});
+
+		});
+	</script>
+</head>
+<body>
+<form action="__CONTROLLER__/add_do" method="post" class="definewidth ">
+    <table class="table table-bordered table-hover definewidth m10">
+		<tr>
+		     <td width="10%" class="tableleft">Category number</td>
+            <td><input type="text" id="code" name="code" maxlength="2"/><span id="check" style="color:red;">Enter a 2-digit number</span></td>
+          
+			
+        </tr>
+       <tr>
+		      <td width="10%" class="tableleft">Category Name</td>
+            <td><input type="text" id="name" name="name"/><span id="checked" style="color:red;"></span></td>
+			
+        </tr>
+        <tr>
+            <td class="tableleft"></td>
+            <td>
+                <button type="submit" class="btn btn-primary" id="sub">save</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">Return list</button><span id="jiancha" style="color:red;">
+            </td>	
+        </tr>
+    </table>
+</form><br/><br/>
+</body>
+</html>

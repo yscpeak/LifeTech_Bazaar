@@ -1,0 +1,71 @@
+<php>
+
+$list_menu=M("category")->where("length(code)=2")->select();
+
+</php>
+
+<script>
+
+$(function(){
+	$.get("__MODULE__/Index/checkIsLogin",function(data){
+		if (data){
+			$("#login").show();
+			$("#topNav").show();	
+			$("#no_login").hide();
+			$("#login .f4_b").html(data);
+		}else{
+			$("#no_login").show();
+			$("#login").hide();
+		}		
+	});	
+});
+</script>
+<div class="block clearfix">
+<div class="logotxt">LifeTech Bazaar</div>
+ <div class="f_r log">
+   <ul>
+   
+
+
+        <li class="userInfo" id="no_login"  style="display:none">
+  <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+      <a href="__MODULE__/Index/login" >Login</a>
+ <a href="__MODULE__/Index/register" >Register</a>  |
+ <a href="http://localhost:8080/LifeTech_Bazaar/admin.php/Index/login" >Seller Centre</a>
+    </li>
+  
+   
+
+        <li class="userInfo" id="login" style="display:none">
+  <font id="ECS_MEMBERZONE"><div id="append_parent"></div>
+     <font style="position:relative; top:10px;">
+Hello，【<font class="f4_b"></font>】, Welcome Back!</font>
+ </font>
+</li>
+
+
+   
+
+
+ <li id="topNav" class="clearfix" style="display:none">
+    <a href="__MODULE__/BillOrder/cart"  >Shopping Cart</a>
+    | <a href="__MODULE__/Member/userinfo"  >Personal Center</a>
+    | <a href="__MODULE__/Index/logOut"  >Log Out</a>
+    | <a href="http://localhost:8080/LifeTech_Bazaar/admin.php/Index/login" >Seller Centre</a>
+  </li>
+
+  
+  
+  
+      </ul>
+ </div>
+</div>
+<div  class="topbox"></div>
+<div id="mainNav" class="clearfix">
+  <a href="__MODULE__/Index/index" <eq name="Think.const.ACTION_NAME" value="index">class="cur"</eq>  >Home</a>
+  
+  <foreach name="list_menu" item="row_menu">
+    <a href="__MODULE__/Index/lists/category_code/{$row_menu.code}" <eq name="Think.get.category_code|substr=0,2" value="$row_menu.code">class="cur"</eq>   >{$row_menu.name}</a>
+  </foreach>
+   
+ </div>

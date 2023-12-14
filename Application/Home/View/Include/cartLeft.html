@@ -1,0 +1,14 @@
+<php>
+if ($_SESSION['account']){
+	$cartSum=D("CartView")->where("mem_cart.member_id=".$_SESSION['account']['id'])->sum("count");
+    
+    $moneySum=D("CartView")->where("mem_cart.member_id=".$_SESSION['account']['id'])->sum("price*count");
+
+}
+</php>
+
+<notempty name="Think.session.account">
+<div class="cart" id="ECS_CARTINFO">
+ <a href="cart.htm"  title="shopping cart">There is/are{$cartSum|default=0} item(s) in your shopping cart，total price {$moneySum|default=0}$。</a></div>
+<div class="blank5"></div>
+</notempty>

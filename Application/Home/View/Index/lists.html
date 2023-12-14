@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<title>{$category_name}_Product List Page_{:C('SETTING.TITLE')}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/style.css"  rel="stylesheet" type="text/css" />
+<link href="__RES__/css/page.css"  rel="stylesheet" type="text/css" />
+
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<script src="__RES__/js/jquery.min.js"></script>
+</head>
+<body>
+<include file="Include/header"/>
+<div class="block box">
+  <div id="ur_here">current location: <a href="__MODULE__">Home</a> {$category_father_link} >> {$category_name}  </div>
+</div>
+<div class="blank"></div>
+
+<div class="block clearfix">
+  
+    <div class="AreaL">
+
+    <include file="Include/categoryLeft"/>
+  </div>
+  
+  
+  <div class="AreaR">
+	 
+	  	  <div class="box">
+		 <div class="box_1">
+			<h3><span>Product screening</span></h3>
+			<div class="screeBox">
+			<strong style="display:inline-block;width:110px;">Special offer：</strong>
+            <a href="__CONTROLLER__/lists{$par_special}" <eq name="Think.get.special" value="" >class="curr" </eq>>All</a>&nbsp;
+            <a href="__CONTROLLER__/lists/special/1{$par_special}" <eq name="Think.get.special" value="1" >class="curr" </eq>>special offer</a>&nbsp;
+            <a href="__CONTROLLER__/lists/special/0{$par_special}" <eq name="Think.get.special" value="0" >class="curr" </eq> >Non special offer</a>&nbsp;
+            </div>
+            
+            <div class="screeBox">
+            <strong style="display:inline-block;width:110px;">Recommend :</strong>
+             <a href="__CONTROLLER__/lists{$par_recommend}" <eq name="Think.get.recommend" value="" >class="curr" </eq>>All</a>&nbsp;
+                <a href="__CONTROLLER__/lists/recommend/1{$par_recommend}" <eq name="Think.get.recommend" value="1" >class="curr" </eq>>recommend</a>&nbsp;
+                <a href="__CONTROLLER__/lists/recommend/0{$par_recommend}"<eq name="Think.get.recommend" value="0" >class="curr" </eq> >Non recommend</a>&nbsp;
+
+        	</div>
+            
+            <div class="screeBox">
+                <strong style="display:inline-block;width:110px;">Price range：</strong>
+            
+                       <a href="__CONTROLLER__/lists/{$par_price}"<eq name="Think.get.price" value="" >class="curr" </eq> >All</a>&nbsp;
+              
+                    <a href="__CONTROLLER__/lists/price/0,99{$par_price}"<eq name="Think.get.price" value="0,99" >class="curr" </eq> >0-99</a>&nbsp;
+                 
+                 <a href="__CONTROLLER__/lists/price/99,299{$par_price}"<eq name="Think.get.price" value="99,299" >class="curr" </eq> >99-299</a>&nbsp;
+                 
+                 <a href="__CONTROLLER__/lists/price/299,300{$par_price}"<eq name="Think.get.price" value="299,300" >class="curr" </eq> >299-300</a>&nbsp;
+                 
+       
+                </div>
+			
+        
+      		 </div>
+		</div>
+
+	<div class="blank5"></div>
+    <div class="box">
+ <div class="box_1">
+  <h3>
+  <span>Product list</span><a name='goods_list'></a>
+ 
+  </h3>
+      <form name="compareForm" action=""  method="post" onSubmit="return compareGoods(this);">
+            <div class="centerPadd">
+    <div class="clearfix goodsBox" style="border:none;">
+            <foreach name="list_goods" item="row">
+       <div class="goodsItem">
+           <a href="__CONTROLLER__/info/id/{$row.id}" ><img src="__UPLOAD__/{$row.picture}"  alt="{$row.title}" class="goodsimg"></a><br>
+           <p><a href="__CONTROLLER__/info/id/{$row.id}"  >{$row.title}</a></p>
+                       price<font class="shop_s">{$row.price}$</font><br>
+                                   
+                
+        </div>
+    </foreach>
+            </div>
+    </div>
+        </form>
+  
+ </div>
+</div>
+<div class="blank5"></div>
+ <div  class="yahoo2">{$pageStr}  </div> 
+
+ 
+  
+</div>
+<div class="blank5"></div>
+<include file="Include/footer"/>
+</body>
+</html>

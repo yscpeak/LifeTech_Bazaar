@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/css.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.1.min.js"></script>
+    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+	<link href="__PUBLIC__/Css/css.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body >
+<form class="form-inline definewidth " action="__CONTROLLER__/index" method="post">  
+    member name：
+    <input type="text" name="name" id="name"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">search</button>&nbsp;&nbsp;
+</form>
+<table  class="table table-bordered table-hover definewidth m10" >
+    <thead>
+    <tr>
+        <th>number</th>
+        <th>member name</th>
+        <th>Email address</th>
+        <th>Available Funds</th>
+		<th>Register date</th>
+		<th>operate</th>
+    </tr>
+    </thead>
+	<foreach name="list" item="row">
+	     <tr>
+		 
+            <td>{$row.id}</td>
+           
+            <td>{$row.name}</td>
+            <td>{$row.email}</td>
+			<td>{$row.money}</td>
+            <td>{$row.reg_time}</td>
+            <td>
+				  <a href="__CONTROLLER__/mem_bill/member_id/{$row.id}" title="View order">Detail</a>
+            </td>
+			</foreach>
+        </tr></table>
+			<div   class="yahoo2">{$pageStr}</div>
+		</body>
+		</html>

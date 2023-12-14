@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.2.min.js"></script>
+    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+</head>
+<body>
+<form action="__CONTROLLER__/edit_do" method="post" class="definewidth ">
+<input name="id" type="hidden" value="{$Think.get.id}">
+    <table class="table table-bordered table-hover definewidth m10">
+ 
+		 <tr>
+            <td width="10%" class="tableleft">specifications name</td>
+            <!--<td><input type="text" id="gangwei" name="gangwei"/></td>-->
+			<td><input type="text" id="norms" name="norms" value="{$type.norms}" /></td>
+        </tr>
+        <tr>
+            <td width="10%" class="tableleft">specifications content</td>
+            <!--<td><input type="text" id="gangwei" name="gangwei"/></td>-->
+			<td><input type="text" id="content" name="content" value="{$type.content}" />Use ',' (comma) as the separator for each item</td>
+        </tr>
+        <tr>
+            <td class="tableleft"></td>
+            <td>
+                <button type="submit" class="btn btn-primary" id="sub">save</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">Return list</button><span id="jiancha" style="color:red;"></span>
+            </td>
+			
+			
+			
+			
+			
+			
+			
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+<script>
+    $(function () {
+
+
+		$('#backid').click(function(){
+				window.history.back();
+		 });
+    });
+</script>

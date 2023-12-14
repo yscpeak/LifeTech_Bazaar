@@ -1,0 +1,14 @@
+<!-- <link href="__RES__/css/style.css" rel="stylesheet" type="text/css"> -->
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<foreach name="list_goods" item="row_goods">
+
+  <div class="goodsItem">
+  	<gt name="row_goods.recommend" value="0"><span class="best"></span></gt>
+       <a href="__CONTROLLER__/info/id/{$row_goods.id}"><img src="__UPLOAD__/{$row_goods.picture}" alt="{$row_goods.title}" class="goodsimg"></a><br>
+       <p><a href="" title="{$row_recommend.title}">{$row_goods.title}</a></p>
+       <font class="f1">{$row_goods.price}$</font>
+    </div>
+</foreach>
+
+<div class="more"><a href="__MODULE__/Index/lists/category_code/{$row_goods.category_code}"><img src="__RES__/images/more.gif"></a></div>

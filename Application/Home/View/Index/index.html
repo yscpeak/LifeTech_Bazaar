@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<title>{:C('SETTING.TITLE')}_{:C('SETTING.KEYWORDS')}</title>
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/style.css"  rel="stylesheet" type="text/css" />
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+<script src="__RES__/js/jquery-2.1.4.min.js"></script>
+<script>
+	$(function(){
+		$("div[id^='itemCategory_'] h2").click(function(){
+			value=$(this).attr("value");
+			var content="#show_goods_"+value.substr(0,2);
+			$(this).parent().find("h2").addClass("h2bg");
+			$(this).removeClass();
+			
+			$.get("__CONTROLLER__/getGoodsByCategory/code/"+$(this).attr("value"),function(data){		
+				$(content).html(data);
+			}); 	
+			
+		});
+	});
+
+
+</script>
+
+</head>
+<body>
+<include file="Include/header"/>
+<div class="blank"></div>
+<div class="block clearfix">
+  <div class="box">
+<div style="padding: 0;width:1140px;height:340px;" class="container">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="__RES__/images/banner1.jpg">
+					</div>
+					<div class="item">
+						<img src="__RES__/images/banner2.jpg">
+					</div>
+					<div class="item">
+						<img src="__RES__/images/banner3.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+ <script src="__RES__/js/bootstrap.min.js" type="text/javascript"></script> 
+</div><div class="blank5"></div>
+  
+  <div class="AreaL">
+    <!-- <include file="Include/noticeLeft"/> -->
+  
+    <include file="Include/categoryLeft"/>
+    <include file="Include/hotGoodsLeft"/>
+  </div>
+  
+  <div class="AreaR">
+   
+  
+   
+   
+
+<div class="box">
+<div class="box_2 centerPadd">
+  <div class="itemTit" id="itemBest">Recommending Commodities</div>
+  
+  <div id="show_best_area" class="clearfix goodsBox">
+     <foreach name="list_goods_tuijian" item="row_tuijian">
+      <div class="goodsItem">
+         <span class="best"></span>
+           <a href="__CONTROLLER__/info/id/{$row_tuijian.id}" ><img src="__UPLOAD__/{$row_tuijian.picture}"  class="goodsimg" /></a><br />
+           <p><a href="goods_info.htm"  title="KD876">{$row_tuijian.title}</a></p>
+           <font class="f1">{$row_tuijian.price}$</font>
+        </div>
+    </foreach>
+    <div class="more"><a href="__MODULE__/Index/lists/recommend/1" >More</a></div>
+    </div>
+</div>
+</div>
+<div class="blank5"></div>
+ <foreach name="list_category_goods" item="row_category">
+<div class="box">
+
+        <div class="box_2 centerPadd">    
+          <div class="itemTit  itemTit2" id="itemCategory_{$row_category.id}">
+          <span class="myTitle"><a href="#"  class="f6">{$row_category.name}</a></span>
+            <h2  class="" value="{$row_category.code}"><a href="javascript:void(0)" >All Product</a></h2>
+           
+             <foreach name="row_category.son" item="son_category">
+            <h2 class="h2bg" value="{$son_category.code}"><a href="javascript:void(0)" >{$son_category.name}</a></h2>
+            </foreach>
+          </div>
+          <!-- 商品显示区域 -->
+          <div id="show_goods_{$row_category.code}" class="clearfix goodsBox">
+          
+             <foreach name="row_category.goods" item="goods">
+              <div class="goodsItem">
+                	<gt name="goods.recommend" value="0"><span class="best"></span></gt>
+                   <a href="__MODULE__/Index/info/id/{$goods.id}" ><img src="__UPLOAD__/{$goods.picture}"  alt="" class="goodsimg" /></a><br /><p><a href="__MODULE__/Index/info/id/{$goods.id}"  title="{$goods.title}">{$goods.title}</a></p>
+                   <font class="f1">{$goods.price}$</font>
+                   
+                </div>
+             </foreach>
+            <div class="more"><a href="__MODULE__/Index/lists/category_code/{$row_category.code}" ><img src="__RES__/images/more.gif"  /></a></div>
+            </div>
+        </div>
+        
+
+</div>
+<div class="blank5"></div></foreach>
+
+  
+
+  
+  </div>
+  
+</div>
+<include file="Include/footer"/>
+</body>
+</html>

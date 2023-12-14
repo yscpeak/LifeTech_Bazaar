@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/css.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.1.min.js"></script>
+    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+	<link href="__PUBLIC__/Css/css.css" rel="stylesheet" type="text/css">
+	<script>
+	$(function(){
+		$("#view_way").change(function(){
+			location.href='__CONTROLLER__/'+$(this).val()+"/member_id/"+$("#member_id").val();
+		});
+	});
+	</script>
+</head>
+<body >
+<form   class="form-inline definewidth " action="__CONTROLLER__/balance" method="post">   
+    member name：
+    <input type="text" name="name" id="name"class="abc input-default"value="{$Think.post.name}">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">search</button>&nbsp;&nbsp;
+</form>
+<table  class="table table-bordered table-hover definewidth m10" >
+    <thead>
+    <tr>
+        <th>member name</th>
+        <th>Operate date</th>
+        <th>types</th>
+        <th>notes</th>
+		<th>money</th>
+		
+		
+    </tr>
+    </thead>
+	<foreach name="list" item="row">
+	     <tr>
+		 
+            <td>{$row.name}</td>
+            <td>{$row.datetime}</td>
+			<td>
+            <if condition="$row.type eq 1">Withdrawal
+			<else/>Recharge
+			</if></td>
+            <td>{$row.memo}</td>
+			<td>{$row.money}</td>
+		 </tr>	
+			
+	</foreach>
+			
+       </table>		<div   class="yahoo2">{$pageStr}</div>
+		</body>
+		</html>

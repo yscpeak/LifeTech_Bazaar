@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/css.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.1.min.js"></script>
+    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+	<script>
+		$(function(){
+			$(".Delete").click(function(){
+				if(confirm("Are you sure you want to delete it？"))
+				{		
+					$.get("__CONTROLLER__/Delete",{id:$(this).attr("id")});
+					$(this).parent().parent().empty();		
+				}
+			});
+			
+
+
+		});
+	</script>
+
+</head>
+<body >
+<form class="form-inline definewidth " action="__CONTROLLER__/index" method="post">  
+    Specifications Name:
+    <input type="text" name="norms" id="norms"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">search</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">Add specifications</button>&nbsp;&nbsp; 
+</form>
+<table class="table table-bordered table-hover definewidth m10" >
+    <thead>
+    <tr>
+        <th>specificationsID</th>
+        <th>specifications name</th>
+		<th>specifications content</th>
+        <th>operate</th>
+    </tr>
+    </thead>
+	<foreach name="list" item="row">
+	     <tr>
+		 
+            <td>{$row.id}</td>
+            <td>{$row.norms}</td>
+			<td>{$row.content}</td>
+            <td>
+                  <a  href="__CONTROLLER__/edit/id/{$row.id}">edit</a>
+                  <a  class="Delete" href="#" id="{$row.id}">Delete</a>
+            </td>
+			
+        </tr>
+		</foreach>
+</table>
+<div style="float:right;" id="page" class="yahoo2">{$show}</div>
+
+		</body>
+		</html>
+
+<script>
+    $(function () {
+        
+		$('#addnew').click(function(){
+
+				window.location.href="__CONTROLLER__/add";
+		 });
+
+
+    });
+
+	function del(id)
+	{
+		
+		
+		if(confirm("Are you sure you want to delete it？"))
+		{
+		
+			var url = "index.html";
+			
+			window.location.href=url;		
+		
+		}
+	
+	
+	
+	
+	}
+</script>

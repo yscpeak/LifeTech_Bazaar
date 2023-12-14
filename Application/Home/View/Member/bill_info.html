@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="TPSHOP BETA v1.0.0">
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+
+<title>Order Details_Personal Center_{:C('SETTING.TITLE')}</title>
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/style.css" rel="stylesheet" type="text/css">
+
+<!-- <link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" /> -->
+
+<script type="text/javascript" src="__RES__/js/jquery.min.js" ></script>
+
+</head>
+<body>
+<include file="Include/header" />
+<div class="block clearfix">
+<div class="blank"></div>
+<div id="mainNav" class="clearfix"></div>
+
+<div class="block box">
+  <div id="ur_here">
+  Current Location: <a href="__MODULE__">Home</a> >> <a href="__MODULE__/Member/bill">My Order</a> >> Order Details  </div>
+</div>
+
+<div class="blank"></div>
+<div class="block clearfix">
+  
+  <div class="AreaL">
+    <div class="box">
+     <include file="Include/memberLeft"/>
+    </div>
+  </div>
+  
+  
+  <div class="AreaR">
+    <div class="box">
+     <div class="box_1">
+     
+	 
+ <div class="userCenterBox boxCenterList clearfix" style="_height:5%;">
+
+   <h5><span>Order Details</span></h5>
+   <div class="blank"></div>
+	   
+   <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+		<tr>
+		  <td width="28%" align="right" bgcolor="#f1f1f1">Order Number：</td>
+		  <td width="72%" align="left" bgcolor="#FFFFFF">{$row_bill.code}</td>
+		</tr>
+		<tr>
+		  <td width="28%" align="right" bgcolor="#f1f1f1">Total Amount：</td>
+		  <td width="72%" align="left" bgcolor="#FFFFFF">{$row_bill.money}</td>
+		</tr>
+		<tr>
+		  <td width="28%" align="right" bgcolor="#f1f1f1">Buying Time： </td>
+		  <td width="72%" align="left" bgcolor="#FFFFFF">{$row_bill.datetime}</td>
+		</tr>
+		<tr>
+			<td width="28%" align="right" bgcolor="#f1f1f1" id="extend_field5i">Status：</td>
+			<td width="72%" align="left" bgcolor="#FFFFFF">
+			
+			<if condition ="$row_bill['status'] eq 0">
+			Unpaid
+			<elseif condition ="$row_bill['status'] eq 1"/>
+			Paid
+			<elseif condition ="$row_bill['status'] eq 2"/>
+			Shipped
+			<elseif condition ="$row_bill['status'] eq 3"/>
+			Received Goods
+			<elseif condition ="$row_bill['status'] eq 4"/>
+			Return Successful
+            <elseif condition ="$row_bill['status'] eq 5"/>
+			Return Failed
+			</if>
+		
+			
+			</td>
+		</tr>
+       </table>
+       <div class="blank"></div>
+	   
+       <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+          <tbody><tr align="center">
+            <td width="26%" bgcolor="#f1f1f1">Product Name</td>
+            <td width="15%" bgcolor="#f1f1f1">Money</td>
+            <td width="10%" bgcolor="#f1f1f1">Number</td>
+			<td width="17%" bgcolor="#f1f1f1">Amount</td>
+			<td width="23%" bgcolor="#f1f1f1">Notes</td>
+			<td width="6%" bgcolor="#f1f1f1">Comment</td>
+          </tr>
+          <foreach name="list_billDetail" item="row">
+          <tr>
+            <td align="center" bgcolor="#ffffff">{$row.title}</td>
+            <td align="right" bgcolor="#ffffff">{$row.price}$</td>
+            <td align="center" bgcolor="#ffffff">{$row.count}</td>
+			<td align="center" bgcolor="#ffffff">{$row.total}</td>
+            <td align="center" bgcolor="#ffffff">{$row.attribute} </td>
+            <td align="center" bgcolor="#ffffff">
+			<a href="__CONTROLLER__/comments/goods_id/{$row.goods_id}/id/{$row_bill.id}">Comment</a></td>
+
+          </tr>
+		  
+         </foreach> 
+
+            </tbody></table>
+			       <div class="blank"></div>
+		<div style="text-align:right">
+ <input name="submit123" type="button" value="Return >>" class="bnt_blue_1" onclick="history.back();" style="border:none;">    </div>  
+ </div>
+	
+	 
+     </div>
+    </div>
+  </div>
+  
+</div>
+
+<include file="Include/footer"/>
+</body></html>

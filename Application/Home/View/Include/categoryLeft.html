@@ -1,0 +1,38 @@
+<php>
+	$list_category=M("category")->where("length(code)=2")->select();
+    
+    foreach($list_category as &$tmp){
+    	$list2=M("category")->where("length(code)=4 and code like '".$tmp['code']."%'")->select();
+    	$tmp['son']=$list2;
+    
+    
+    }
+
+</php>
+<style>
+<!--
+	.cur{
+		font-weight:bold;
+		
+		}
+
+ -->
+</style>
+
+<div class="box">
+ <div class="box_1">
+  <div id="category_tree">
+    <foreach name="list_category" item="row_category">
+        <dl>
+        <dt><a href="__MODULE__/Index/lists/category_code/{$row_category.code}" <eq name="Think.get.category_code" value="$row_category.code">class="cur"</eq>    >{$row_category.name}</a></dt>
+        <foreach name="row_category.son" item="row_category2">
+            <dd><a href="__MODULE__/Index/lists/category_code/{$row_category2.code}"<eq name="Think.get.category_code" value="$row_category2.code">class="cur"</eq> >&nbsp{$row_category2.name}</a></dd>
+        </foreach>
+           
+        </dl>
+    </foreach>
+     
+  </div>
+ </div>
+</div>
+<div class="blank5"></div>

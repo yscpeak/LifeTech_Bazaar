@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/style.css" />
+	 <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/css.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery-1.8.1.min.js"></script>
+    
+    <script type="text/javascript" src="__PUBLIC__/Js/bootstrap.js"></script>
+
+	<script>
+		$(function(){
+			$(".Delete").click(function(){
+				
+				if(confirm("Are you sure you want to delete it？"))
+				{		
+					$.get("__CONTROLLER__/Delete",{id:$(this).attr("id")});
+					$(this).parent().parent().empty();		
+				}
+			});
+			
+			$("#rolename").keyup(function(){
+			   var roleName=$(this).val();
+			   $.getJSON("__CONTROLLER__/find",{name:roleName},function(data){
+			        $("table tr:gt(0)").remove();
+			        $.each(data,function(index,info){
+				     var test="<tr><td>"+info['id']+"</td><td>"+info['code']+"</td><td>"+info['name']+"</td><td><a href='__CONTROLLER__/edit/id/"+info['id']+"'>edit</a>  <a class='Delete' href='#'adminuserid='"+info['id']+"' >Delete</a></td></tr>";
+					  $("table").append(test);
+				   });
+				  
+			   });
+			});
+
+		});
+	</script>
+    
+</head>
+<body style="">
+<form class="form-inline definewidth " action="__CONTROLLER__/index" method="post">  
+    Category Name：
+    <input type="text" name="name" id="name"class="abc input-default"  value="{$Think.post.name}">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">search</button>&nbsp
+    <a href="__CONTROLLER__/add" class="btn btn-success">Add major categories</a>
+</form>
+<table class="table table-bordered table-hover definewidth m10" >
+    <thead>
+    <tr>
+        <th>category id</th>
+        <th>Category Name</th>
+        <th>operate</th>
+    </tr>
+    </thead>
+	<foreach name="list" item="row">
+	     <tr>
+		 
+            <td>{$row.id}</td>
+
+            <td><eq name="row.code|strlen" value="4">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{$row.name}&nbsp[{$row.code}]<else/><span style="font-weight:bold">{$row.name}&nbsp[{$row.code}]</span></eq></td>
+            <td>
+              <a  href="__CONTROLLER__/edit/id/{$row.id}">edit</a>
+              <a  class="Delete" href="#" id="{$row.id}">Delete</a>
+              <eq name="row.code|strlen" value="2"><a  href="__CONTROLLER__/addChild/code/{$row.code}">Add subcategories</a></eq>
+            </td>
+			
+        </tr>
+		</foreach>
+</table>
+<div style="float:right;" id="page" class="yahoo2">{$page}</div>
+
+		</body>
+		</html>

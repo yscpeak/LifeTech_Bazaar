@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="TPSHOP BETA v1.0.0">
+
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<title>Confirm Payment_{:C('SETTING.TITLE')}</title>
+
+
+<link href="__RES__/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__RES__/js/jquery.min.js" ></script>
+</head>
+<body>
+<div class="block clearfix">
+ <div class="f_l"></div>
+</div>
+<div class="blank"></div>
+
+<include file="Include/header" />
+<div class="block box">
+ <div id="ur_here">
+  Current Location: <a href="__MODULE__/index/index">Home</a> <code>&gt;</code> Confirm Payment </div>
+</div>
+
+<div class="blank"></div>
+<div class="block">
+  
+  
+  
+
+        
+        
+                
+        <div class="flowBox" style="margin:30px auto 70px auto;">
+         <h6 style="text-align:center; height:30px; line-height:30px;">Thank you for shopping in our store! Your order has been successfully submitted, please remember your Order No.: <font style="color:red; font-size:15px; font-weight:bold">{$bill.code}</font></h6>
+          <table width="99%" align="center" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff" style="border:1px solid #ddd; margin:20px auto;">
+            <tbody><tr>
+              <td align="center" bgcolor="#FFFFFF">
+              The payment method you have selected: <strong>
+              <if condition="$bill.pay_way eq 0">
+              Balance payment
+              <elseif condition="$bill.pay_way eq 1" />Digital Currency E Payment
+              <else/>
+              Cash on Delivery
+             </if>
+              </strong>。Your Payable Money: <strong>{$bill.money}$</strong>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">
+              <div align="center" style="margin:8px auto;">
+              <FORM METHOD=POST ACTION="__CONTROLLER__/account4" id="form1">
+                <INPUT TYPE="hidden" NAME="code" value="{$bill.code}">
+                <INPUT TYPE="hidden" NAME="money" value="{$bill.money}">
+                <INPUT TYPE="hidden" NAME="pay_way" value="{$bill.pay_way}">
+
+                <a href="#" id="payButton" style="text-decoration: none;background:red;color:#fff;display:inline;padding:5px 15px;cursor:pointer;border-radius:3px;" >
+                <eq name="bill.pay_way" value="1">
+                      Go Pay
+                <else/>
+                      Confirm Payment
+                </eq>
+                </a>
+
+              </FORM>      
+			</div>
+              </td>
+            </tr>
+                      </tbody></table>
+                    <p style="text-align:center; margin-bottom:20px;">You Can <a href="__MODULE__/index/index">Return Home</a> Go <a href="__MODULE__/BillOrder/account2">Back</a></p>
+        </div>
+                
+
+
+
+</div>
+<div class="blank5"></div>
+<div class="blank"></div>
+
+<include file="Include/footer" />
+
+<div class="blank"></div>
+<div class="blank"></div>
+              <script>
+              $(function(){
+                $("#payButton").click(function(){
+                    $("#form1").submit();
+                });
+              
+              })
+              </script>
+</body></html>

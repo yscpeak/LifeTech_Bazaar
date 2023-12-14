@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<title>{$row_goods.title}_Detail Pages_{:C('SETTING.TITLE')}</title>
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/style.css" tppabs="__RES__/css/style.css" rel="stylesheet" type="text/css" />
+
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="__RES__/js/jquery.min.js" ></script>
+<script>
+$(function(){
+	
+	$("#number").keyup(function(){
+		if(!isNaN($(this).val()))
+		{
+			var count=$(this).val()*$("#goods_price").html()*1;
+			$("#GOODS_AMOUNT").html(count);
+		}else{
+			$(this).val(1);
+		}
+	});
+	
+	$("#goods_attr_group :radio").click(function(){
+		$("#goods_attribute").val(this.value);
+	
+	});
+	
+	$("#addCartButton").click(function(){
+		if ($("#goods_attribute").size()>0)		//商品attribute组不为空
+		{
+			if ($("#goods_attribute").val()=="")		//商品attribute组不为空
+			{
+				alert('Product attributes are mandatory');		
+				return false;		
+			}
+		}
+		var number=$("#number").attr("value");
+		location.href='__MODULE__/BillOrder/cart/id/{$row_goods.id}/count/'+number+"/attribute/"+$("#goods_attribute").val();
+	
+	});
+	//添加收藏
+	$("#addCollectButton").click(function(){
+		$.get("__MODULE__/Member/collect_add/goods_id/{$row_goods.id}",function(data){
+			
+			if (data=="success")
+				alert('Product collection successful！');
+			else{
+				alert('Collection failed, please log in first');
+			}
+			
+		});
+	
+	});
+	$("#demo1 img").click(function(){
+		//alert($(this).attr("src"));
+		$("#goods_picture_big").attr("src",$(this).attr("src"));
+		
+		
+		});
+		
+	});
+
+</script>
+</head>
+<body>
+<include file="Include/header"/>
+<div class="block box">
+  <div id="ur_here">
+  current location: <a href="__MODULE__">Home</a> >> <a href="__MODULE__/Index/lists">Product list</a> >> Detail Pages  </div>
+</div>
+<div class="blank"></div>
+<div class="block clearfix">
+  
+  <div class="AreaL">
+<include file="Include/cartLef"/>
+<include file="Include/categoryLeft"/>
+
+   
+    
+    
+<div class="blank5"></div> </div>
+  
+  
+  <div class="AreaR">
+   
+   <div id="goodsInfo" class="clearfix">
+      
+     <div class="textInfo">
+     <form action="javascript:addToCart(1)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+     <div class="clearfix">
+      <p class="f_l" style=" font-size:20px">{$row_goods.title}</p>
+
+      </div>
+      <ul>
+             
+      <li class="clearfix">
+       <dd><strong>Product Code：</strong>{$row_goods.item_no}</dd>
+       <dd class="ddR"><strong>Recommend：</strong><eq name="row_goods.recommend" value="0">No<else/>Yes</eq></dd>
+      </li>
+      <li class="clearfix">
+      <dd><strong>Listing Time：</strong>{$row_goods.datetime}</dd>
+      <dd class="ddR"><strong>Special Offer：</strong><eq name="row_goods.special" value="0">No<else/>Special Offer</eq></dd>
+      </li>
+      <li class="clearfix">
+       <dd><strong>Product Price：</strong><a  href="#" style=" font-size:13px;text-decoration:none"id="goods_price">{$row_goods.price}</a></dd>
+       <dd class="ddR"><strong>Clicks：</strong>{$row_goods.clicks}</dd>
+      </li>
+      
+      <li class="clearfix">
+      <dd><strong>Total Price：</strong><font id="GOODS_AMOUNT" class="shop">{$row_goods.price}</font></dd>
+       <dd class="ddR"><strong>Purchase Quantity：</strong><input name="number" type="text" id="number" value="1" size="4" onblur="changePrice()" style="border:1px solid #ccc; "/></dd>
+      </li>
+
+     <li class="padd loop" id="goods_attr_group">
+         <notempty name="goodsAttr">  
+      	<input name="goods_attribute" id="goods_attribute" type="hidden" value="" />
+      <strong>{$goodsAttr.name}:</strong><br />
+	   <foreach name="goodsAttr.collect" item="collect">	
+		<label for="spec_value_237">
+		<input type="radio" name="attrGroup" value="{$collect}" id="attr_value_{$key}"  />{$collect} </label>
+	  </foreach>
+       </notempty>
+	   </li>   
+            
+      <li class="padd">
+      <a href="#" id="addCartButton" style=" text-decoration: none;background:red;color:#fff;display:inline;padding:5px 15px;cursor:pointer;border-radius:3px;">
+     Add to Shopping Cart</a>
+      <a href="#" id="addCollectButton" style=" text-decoration: none;background:#FDDA02;color:#fff;display:inline;padding:5px 15px;cursor:pointer;border-radius:3px;">Collect</a></li>
+      </ul>
+      </form>
+     </div>
+     <div class="imgInfo">
+          <a href="javascript:;" >
+      <img  id="goods_picture_big" src="__UPLOAD__/{$row_goods.picture}" height="250px" width="230px" alt=""/>
+     </a>
+              <div class="blank5"></div>
+     
+     
+		       
+         <div class="blank5"></div>
+         
+     </div>
+    
+   </div>
+   <div class="blank"></div>
+   
+   
+     <div class="box">
+     <div class="box_1">
+      <h3 style="padding:0 5px;">
+        <div id="com_b" class="history clearfix">
+        <h2>Product Description：</h2>
+       
+                </div>
+      </h3>
+
+      <div id="com_h" style=" padding:10px">{$row_goods.content}</div>
+     </div>
+     <div class="box_1">
+      <h3 style="padding:0 5px;">
+        <div id="com_b" class="history clearfix">
+        <h2>Reviews：</h2>
+         </div>
+      </h3>
+
+      <div id="com_h" style=" padding:10px">
+	       <table width="100%" style="border:none;text-align:left;">
+          <tbody>
+          <foreach name="comments" item="row">
+          <tr>
+            <td align="left" width="130" bgcolor="#ffffff">{$row.p_time}</td>
+            <td align="left" bgcolor="#ffffff">[{$row.member_name}]说：</td>
+           
+
+          </tr>
+          <tr>
+            <td colspan="2" align="left" bgcolor="#ffffff" style="border-bottom:1px solid #f1f1f1">{$row.content}</td>
+          </tr>
+		  
+         </foreach> 
+
+            </tbody></table>
+	  </div>
+     </div>
+    </div>
+
+  <div class="blank"></div>
+  
+  
+
+     
+    
+  </div>
+  
+</div>
+<include file="Include/footer"/>
+
+
+</body>
+</html>
+ <script>
+      function $gg(id){  
+        return (document.getElementById) ? document.getElementById(id): document.all[id]
+      }
+      
+      var boxwidth=53;//跟picture的实际尺寸相符
+      
+      var box=$gg("demo");
+      var obox=$gg("demo1");
+      var dulbox=$gg("demo2");
+      obox.style.width=obox.getElementsByTagName("li").length*boxwidth+'px';
+      dulbox.style.width=obox.getElementsByTagName("li").length*boxwidth+'px';
+      box.style.width=obox.getElementsByTagName("li").length*boxwidth*3+'px';
+      var canroll = false;
+      if (obox.getElementsByTagName("li").length >= 4) {
+        canroll = true;
+        dulbox.innerHTML=obox.innerHTML;
+      }
+      var step=5;temp=1;speed=50;
+      var awidth=obox.offsetWidth;
+      var mData=0;
+      var isStop = 1;
+      var dir = 1;
+      
+      function s(){
+        if (!canroll) return;
+        if (dir) {
+      if((awidth+mData)>=0)
+      {
+      mData=mData-step;
+      }
+      else
+      {
+      mData=-step;
+      }
+      } else {
+        if(mData>=0)
+        {
+        mData=-awidth;
+        }
+        else
+        {
+        mData+=step;
+        }
+      }
+      
+      obox.style.marginLeft=mData+"px";
+      
+      if (isStop) return;
+      
+      setTimeout(s,speed)
+      }
+      
+      
+      function moveLeft() {
+          var wasStop = isStop;
+          dir = 1;
+          speed = 50;
+          isStop=0;
+          if (wasStop) {
+            setTimeout(s,speed);
+          }
+      }
+      
+      function moveRight() {
+          var wasStop = isStop;
+          dir = 0;
+          speed = 50;
+          isStop=0;
+          if (wasStop) {
+            setTimeout(s,speed);
+          }
+      }
+      
+      function scrollStop() {
+        isStop=1;
+      }
+      
+      function clickLeft() {
+          var wasStop = isStop;
+          dir = 1;
+          speed = 25;
+          isStop=0;
+          if (wasStop) {
+            setTimeout(s,speed);
+          }
+      }
+      
+      function clickRight() {
+          var wasStop = isStop;
+          dir = 0;
+          speed = 25;
+          isStop=0;
+          if (wasStop) {
+            setTimeout(s,speed);
+          }
+      }
+      </script>

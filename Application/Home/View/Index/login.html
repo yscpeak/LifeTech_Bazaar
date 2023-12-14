@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<title>login_{:C('SETTING.TITLE')}</title>
+
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/style.css"  rel="stylesheet" type="text/css" />
+
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<script src="__RES__/js/jquery.min.js"></script>
+<script>	
+function userLogin()
+{	
+	if ($("#name").val()=="")
+	{
+		alert('User name is required！');
+		$("#name").focus();
+		return false;	
+	}
+	if ($("#password").val()=="")
+	{
+		alert('Password required！');
+		$("#password").focus();
+		return false;	
+	}
+	return true;
+}
+</script>
+<body>
+<include file="Include/header"/>
+<div class="block box">
+ <div id="ur_here">
+  current location: <a href="#">Home</a> <code>&gt;</code> User Center  </div>
+</div>
+
+<div class="blank"></div>
+
+<div class="usBox clearfix">
+  <div class="usBox_1 f_l">
+   <div style="font-size:20px;color:#929ABD;text-align:center;padding:30px;">Log in</div>
+   <form name="formLogin" action="__CONTROLLER__/login_do" method="post" onSubmit="return userLogin()"> 
+        <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
+          <tr>
+            <td width="15%" align="right">user name</td>
+            <td width="85%"><input name="name" id="name" type="text" size="25" class="inputBg" /></td>
+          </tr>
+          <tr>
+            <td align="right">password</td>
+            <td>
+            <input name="password" id="password" type="password" size="15"  class="inputBg"/>
+            </td>
+          </tr>
+                  
+          <tr>
+            <td>&nbsp;</td>
+            <td align="left">
+            <input type="hidden" name="act" value="act_login" />
+            <input type="hidden" name="back_act" value="" />
+            <input type="submit" name="submit" value="Submit" />
+            </td>
+          </tr>
+	  
+      </table>
+    </form>
+  </div>
+  
+  <div class="usTxt">
+    <strong>If you are not a member, please register</strong>  <br />
+    <strong class="f4">Friendly reminder:</strong><br />
+        Not registering as a member can also purchase products in our store<br />
+            But after registering, you can:<br />
+    1. Save your personal information<br />
+    2. Collect the products you follow<br />
+    3. Enjoy the membership point system<br />
+    <br />
+    <a href="__MODULE__/Index/register" >register</a>
+  </div>
+</div>
+
+
+
+    
+
+
+    
+
+    
+
+    
+<include file="Include/footer"/>
+</body>
+</html>

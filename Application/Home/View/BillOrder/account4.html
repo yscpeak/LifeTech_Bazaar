@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="TPSHOP BETA v1.0.0">
+
+<meta name="Keywords" content="{:C('SETTING.KEYWORDS')}" />
+<meta name="Description" content="{:C('SETTING.DESCRIPTION')}" />
+<link rel="shortcut icon" href="__RES__/images/favicon.ico" />
+<link rel="icon" href="__RES__/images/animated_favicon.gif" type="image/gif" />
+<link href="__RES__/css/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+
+<title>Digital Currency E Payment_{:C('SETTING.TITLE')}</title>
+
+<script type="text/javascript" src="__RES__/js/jquery.min.js" ></script>
+<script>
+$(function(){
+
+	$("#J_authSubmit").click(function(){
+		if($("#name").val()==""){
+			alert("Bank card number cannot be empty！");
+			return false;
+		}	
+		if($("#password").val()==""){
+			alert("Bank card password cannot be empty！");
+			return false;
+			}
+		});
+	/**/
+	});
+</script>
+</head>
+<body>
+
+<include file="Include/header"/>
+<div class="blank"></div>
+
+
+<div class="block box">
+ <div id="ur_here">
+  current locationcurrent location: <a href="__MODULE__/index/index">Home</a> <code>&gt;</code> Payment Page
+</div>
+
+<div class="blank"></div>
+<div class="usBox clearfix">
+<div class="usBox_1 f_l">
+   <h1 align="center">Digital Currency E Payment</h1>
+   <form name="formLogin" action="__CONTROLLER__/account4_do" method="post" onSubmit="return userLogin()">
+        <table width="110%" border="0" align="left" cellpadding="8" cellspacing="8">
+           <td width="200%" align="left">Pay Money</td>
+            <td width="120%"><input name="money" id="money" type="text" readonly size="25" class="inputBg" value="{$money}" /></td>
+          <tr>
+            <td width="200%" align="left">Bank Card Number</td>
+            <td width="120%"><input  type="text" size="25" id="name"  value="bank0001" name="car_id" class="inputBg" /></td>
+          </tr>
+          <tr>
+            <td width="200%" align="left">Bank Card Password</td>
+            <td width="20%"><input  type="password" size="15" id="password" class="inputBg"/>
+             <span style="font-size:14px; font-weight:bold"></span>Please Enter Your Password</td>
+                     
+          </tr> 
+          <td>&nbsp;</td>
+            <td align="left">
+			<input type="hidden" name="code" value="{$code}"/>
+            <input type="submit" class="ui-button ui-button-lblue" id="J_authSubmit" value="confirm the payment" data-reactid=".1.0">
+            </td>
+          
+      </table>
+    </form>
+  </div>
+  
+    <div class="usTxt">
+      <strong style="font-size:15px; font-weight:bold;color:red;">
+      Your order number is：{$code}</strong> <br />
+    <br/>
+   
+    <strong class="f5"style="font-size:15px; font-weight:bold">tip：</strong><br />
+    Please bind your card number for your convenience in consumption<br />
+    <p style="font-size:12px; ">
+          In your daily consumption, this website has no system upgrades, major machine maintenance, etc.
+
+Reason: Please be cautious when using your card number and other personal information for safe online consumption.
+
+Wishing you a happy and good mood!
+          </p>
+  </div>
+  
+<div class="blank"></div>
+
+<include file="Include/orderfooter"/>
+
+</body></html>
