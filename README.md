@@ -12,5 +12,5 @@
 
 ![Admin Management](https://github.com/yscpeak/LifeTech_Bazaar/raw/main/w6.png)
 
-![Database Design](https://github.com/yscpeak/LifeTech_Bazaar/raw/main/LifeTech_Bazaar - Entity Relationship Diagram.drawio.png)
+![Database Design](https://github.com/yscpeak/LifeTech_Bazaar/raw/main/LifeTech_Bazaar-EntityRelationshipDiagram.drawio.png)
 
